@@ -13,4 +13,10 @@ public class StarWarsService {
         return restTemplate.getForObject("https://swapi.co/api/films/2", StarWarsCharacter.class);
     }
 
+    public StarWarsCharacter fetchCharacterDetails(int characterID) {
+        System.setProperty("http.agent", "StarWars");
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject("https://swapi.co/api/people/" + characterID + "/", StarWarsCharacter.class);
+    }
+
 }
