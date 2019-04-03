@@ -17,35 +17,66 @@ public class StarWarsController {
     @Autowired
     StarWarsService starWarsService;
 
+
     @RequestMapping("/")
     public String displayStarWarsEpisode5Page(ModelMap modelMap) {
-        StarWarsCharacter starWarsCharacter = starWarsService.fetchAllCharacters();
         setEmpireStrikesBackCharacters(modelMap);
-
-
-
-
         return "home";
+    }
+
+    @RequestMapping("/finalDetail")
+    public String displayCharacterDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "details";
     }
 
     public void setEmpireStrikesBackCharacters(ModelMap modelMap) {
         modelMap.put("luke", starWarsService.fetchCharacterDetails(1));
-        starWarsService.fetchCharacterDetails(2);
-        starWarsService.fetchCharacterDetails(3);
-        starWarsService.fetchCharacterDetails(4);
-        starWarsService.fetchCharacterDetails(5);
-        starWarsService.fetchCharacterDetails(10);
-        starWarsService.fetchCharacterDetails(13);
-        starWarsService.fetchCharacterDetails(14);
-        starWarsService.fetchCharacterDetails(18);
-        starWarsService.fetchCharacterDetails(20);
-        starWarsService.fetchCharacterDetails(21);
-        starWarsService.fetchCharacterDetails(22);
-        starWarsService.fetchCharacterDetails(23);
-        starWarsService.fetchCharacterDetails(24);
-        starWarsService.fetchCharacterDetails(25);
-        starWarsService.fetchCharacterDetails(26);
+        modelMap.put("C3PO", starWarsService.fetchCharacterDetails(2));
+        modelMap.put("R2D2", starWarsService.fetchCharacterDetails(3));
+        modelMap.put("Darth", starWarsService.fetchCharacterDetails(4));
+        modelMap.put("Leia", starWarsService.fetchCharacterDetails(5));
+        modelMap.put("ObiWan", starWarsService.fetchCharacterDetails(10));
+        modelMap.put("Chewbacca", starWarsService.fetchCharacterDetails(13));
+        modelMap.put("Han", starWarsService.fetchCharacterDetails(14));
+        modelMap.put("Wedge", starWarsService.fetchCharacterDetails(18));
+        modelMap.put("Yoda", starWarsService.fetchCharacterDetails(20));
+        modelMap.put("Palpatine", starWarsService.fetchCharacterDetails(21));
+        modelMap.put("Boba", starWarsService.fetchCharacterDetails(22));
+        modelMap.put("IG88", starWarsService.fetchCharacterDetails(23));
+        modelMap.put("Bossk", starWarsService.fetchCharacterDetails(24));
+        modelMap.put("Lando", starWarsService.fetchCharacterDetails(25));
+        modelMap.put("Lobot", starWarsService.fetchCharacterDetails(26));
     }
+
+    public void setCharactersHomeWorld(ModelMap modelMap) {
+        modelMap.put("lukeWorld", starWarsService.fetchHomeWorldDetails(1));
+        modelMap.put("C3POWorld", starWarsService.fetchHomeWorldDetails(2));
+        modelMap.put("R2D2World", starWarsService.fetchHomeWorldDetails(3));
+        modelMap.put("DarthWorld", starWarsService.fetchHomeWorldDetails(4));
+        modelMap.put("LeiaWorld", starWarsService.fetchHomeWorldDetails(5));
+        modelMap.put("ObiWanWorld", starWarsService.fetchHomeWorldDetails(10));
+        modelMap.put("ChewbaccaWorld", starWarsService.fetchHomeWorldDetails(13));
+        modelMap.put("HanWorld", starWarsService.fetchHomeWorldDetails(14));
+        modelMap.put("WedgeWorld", starWarsService.fetchHomeWorldDetails(18));
+        modelMap.put("YodaWorld", starWarsService.fetchHomeWorldDetails(20));
+        modelMap.put("PalpatineWorld", starWarsService.fetchHomeWorldDetails(21));
+        modelMap.put("BobaWorld", starWarsService.fetchHomeWorldDetails(22));
+        modelMap.put("IG88World", starWarsService.fetchHomeWorldDetails(23));
+        modelMap.put("BosskWorld", starWarsService.fetchHomeWorldDetails(24));
+        modelMap.put("LandoWorld", starWarsService.fetchHomeWorldDetails(25));
+        modelMap.put("LobotWorld", starWarsService.fetchHomeWorldDetails(26));
+    }
+
+//    private String determineDetails(StarWarsCharacter starWarsCharacter) {
+//       if(starWarsCharacter.getName().equals(starWarsService.fetchCharacterDetails(1).getName())) {
+//           return "LukeDetails";
+//       } else if (starWarsCharacter.getName().equals(starWarsService.fetchCharacterDetails(2).getName())){
+//           return "C3PODetails";
+//       } else return "/";
+//
+//    }
 
 
 

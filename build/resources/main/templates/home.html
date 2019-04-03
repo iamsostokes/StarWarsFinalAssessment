@@ -3,12 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <title>Star Wars Episode V</title>
+    <link rel="stylesheet" th:href="@{index.css}" type="text/css">
 </head>
 <body>
 
-<div>
-    <p th:text="${luke.getName()}"></p>
+<div class="characterContainer">
+    <div>
+        <a th:text="${luke.getName()}" th:href="@{/finalDetail}"></a>
+    </div>
+
+    <div>
+        <p th:text="${C3PO.getName()}"></p>
+        <a>C3-PO Details</a>
+    </div>
+
+    <div>
+        <p th:text="${R2D2.getName()}"></p>
+        <a>R2-D2 Details</a>
+    </div>
 </div>
+
+<div class="characterContainer">
+    <div>
+        <p th:text="${Darth.getName()}"></p>
+        <a>Darth Vader Details</a>
+    </div>
+
+    <div>
+        <p th:text="${Leia.getName()}"></p>
+        <a>Leia Organa Details</a>
+    </div>
+
+    <div>
+        <p th:text="${ObiWan.getName()}"></p>
+        <a>Obi-Wan Kenobi Details</a>
+    </div>
+</div>
+
+<div class="characterContainer">
+    <div>
+        <p th:text="${Chewbacca.getName()}"></p>
+        <a>Chewbacca Details</a>
+    </div>
+
+    <div>
+        <p th:text="${Han.getName()}"></p>
+        <a>Han Solo Details</a>
+    </div>
+
+    <div>
+        <p th:text="${Wedge.getName()}"></p>
+        <a>Wedge Antilles Details</a>
+    </div>
+</div>
+
+<div class="characterContainer">
+    <div>
+        <p th:text="${Yoda.getName()}"></p>
+        <a>Yoda Details</a>
+    </div>
+
+    <div>
+        <p th:text="${Palpatine.getName()}"></p>
+        <a>Palpatine Details</a>
+    </div>
+
+    <div>
+        <p th:text="${Boba.getName()}"></p>
+        <a>Boba Fett Details</a>
+    </div>
+</div>
+
+<div class="characterContainer">
+    <div>
+        <p th:text="${IG88.getName()}"></p>
+        <a>IG-88 Details</a>
+    </div>
+
+    <div>
+        <p th:text="${Bossk.getName()}"></p>
+        <a>Bossk Details</a>
+    </div>
+</div>
+
+<div class="characterContainer">
+    <div>
+        <p th:text="${Lando.getName()}"></p>
+        <a>Lando Calrissian Details</a>
+    </div>
+
+    <div>
+        <p th:text="${Lobot.getName()}"></p>
+        <a>Lobot Details</a>
+    </div>
+</div>
+
 
 </body>
 </html>

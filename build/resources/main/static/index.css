@@ -1,0 +1,9 @@
+.characterContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.characterContainer div {
+    margin-right: auto;
+    margin-left: auto;
+}

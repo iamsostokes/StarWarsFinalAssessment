@@ -1,5 +1,6 @@
 package com.detroitlabs.StarWarsFinalAssessment.service;
 
+import com.detroitlabs.StarWarsFinalAssessment.model.HomeWorld;
 import com.detroitlabs.StarWarsFinalAssessment.model.StarWarsCharacter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -17,6 +18,12 @@ public class StarWarsService {
         System.setProperty("http.agent", "StarWars");
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject("https://swapi.co/api/people/" + characterID + "/", StarWarsCharacter.class);
+    }
+
+    public HomeWorld fetchHomeWorldDetails(int homeworldID) {
+        System.setProperty("http.agent", "StarWars");
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject("https://swapi.co/api/planets/"+ homeworldID +"/", HomeWorld.class);
     }
 
 }
