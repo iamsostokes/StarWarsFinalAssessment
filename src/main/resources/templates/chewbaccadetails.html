@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Chewbacca Details</title>
+    <link rel="stylesheet" th:href="@{index.css}" type="text/css">
+</head>
+<body>
+
+<div>
+    <h1 th:text="${Chewbacca.getName()}"></h1>
+    <p th:text="${Chewbacca.getBirth_year()}"></p>
+    <p th:text="${Chewbacca.getGender()}"></p>
+    <p th:text="${ChewbaccaWorld.getName()}"></p>
+</div>
+
+</body>
+</html>

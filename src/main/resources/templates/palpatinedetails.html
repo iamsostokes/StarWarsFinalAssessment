@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Palpatine Details</title>
+    <link rel="stylesheet" th:href="@{index.css}" type="text/css">
+</head>
+<body>
+
+<div>
+    <h1 th:text="${Palpatine.getName()}"></h1>
+    <p th:text="${Palpatine.getBirth_year()}"></p>
+    <p th:text="${Palpatine.getGender()}"></p>
+    <p th:text="${PalpatineWorld.getName()}"></p>
+</div>
+
+</body>
+</html>

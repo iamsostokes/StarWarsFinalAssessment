@@ -31,6 +31,111 @@ public class StarWarsController {
         return "details";
     }
 
+    @RequestMapping("/C3PODetails")
+    public String displayC3PODetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "c3podetails";
+    }
+
+    @RequestMapping("/R2D2Details")
+    public String displayR2D2Details(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "r2d2details";
+    }
+
+    @RequestMapping("/DarthDetails")
+    public String displayDarthDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "darthdetails";
+    }
+
+    @RequestMapping("/LeiaDetails")
+    public String displayLeiaDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "leiadetails";
+    }
+
+    @RequestMapping("/ObiWanDetails")
+    public String displayObiWanDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "obiWandetails";
+    }
+
+    @RequestMapping("/ChewbaccaDetails")
+    public String displayChewbaccaDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "chewbaccadetails";
+    }
+
+    @RequestMapping("/HanDetails")
+    public String displayHanDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "handetails";
+    }
+
+    @RequestMapping("/WedgeDetails")
+    public String displayWedgeDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "wedgedetails";
+    }
+
+    @RequestMapping("/YodaDetails")
+    public String displayYodaDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "yodadetails";
+    }
+
+    @RequestMapping("/PalpatineDetails")
+    public String displayPalpatineDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "palpatinedetails";
+    }
+
+    @RequestMapping("/BobaDetails")
+    public String displayBobaDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "bobadetails";
+    }
+
+    @RequestMapping("/IG88Details")
+    public String displayIG88Details(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "ig88details";
+    }
+
+    @RequestMapping("/BosskDetails")
+    public String displayBosskDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "Bosskdetails";
+    }
+
+    @RequestMapping("/LandoDetails")
+    public String displayLandoDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "Landodetails";
+    }
+
+    @RequestMapping("/LobotDetails")
+    public String displayLobotDetails(ModelMap modelMap) {
+        setEmpireStrikesBackCharacters(modelMap);
+        setCharactersHomeWorld(modelMap);
+        return "Lobotdetails";
+    }
+
     public void setEmpireStrikesBackCharacters(ModelMap modelMap) {
         modelMap.put("luke", starWarsService.fetchCharacterDetails(1));
         modelMap.put("C3PO", starWarsService.fetchCharacterDetails(2));
